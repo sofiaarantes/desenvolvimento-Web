@@ -1,0 +1,12 @@
+iframe {
+  width: 100%;
+  height: 250px;
+  border: 1px solid #ccc;
+  margin-top: 15px;
+  display: none; /* inicialmente oculto */
+}
+
+fieldset {
+  margin-bottom: 15px;
+  padding: 10px;
+}

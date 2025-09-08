@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+
+<body>
+    <!--    TIPO RADIO     -->
+    <form>
+        <p>Estado Civil: <br> <input type="radio" name="estcivil" value="Solteiro"> Solteiro <br>
+            <input type="radio" name="estcivil" value="Casado"> Casado <br>
+            <input type="radio" name="estcivil" value="Viúvo"> Viúvo <br>
+            <input type="radio" name="estcivil" value="Divorciado"> Divorciado <br>
+            <input type="radio" name="estcivil" value="Outros"> Outros <br>
+        </p>
+    </form>
+    <!--    TEXT AREA     -->
+    <form>
+        Área de texto: <br> <textarea cols=60 rows=10 name="texto">    Área para entrada de Texto</textarea> <br>
+    </form>
+    <!--    MÉTODO POST     -->
+    => Método post
+    <form method=post action=teste.php>
+        <label>Senha: </label> <input type=text size=30>
+        <input type="submit" name="enviar" value="Enviar informações">
+    </form>
+    <!--    MÉTODO GET     -->
+    <br> => Método get
+    <form method=get action=teste.php>
+        <label>Senha: </label> <input type=text size=30>
+        <input type="submit" name="enviar" value="Enviar informações">
+    </form>
+</body>
+
+</html>
