@@ -1,0 +1,49 @@
+    /* ==== Exercício 1 ====*/
+    
+    #cabecalho {
+        width: 200px;
+        /* Largura */
+        float: left;
+        /*Posicionamento adjacente à esquerda ou à direita do elemento*/
+    }
+    
+    #conteudo {
+        margin-left: 205px;
+        /*Tamanho da margem para o lado esquerdo*/
+    }
+    
+    #rodape {
+        clear: both;
+        /*Controle para os posicionamentos float.*/
+    }
+    /* ==== Exercício 3 ====*/
+    
+    h1 span {
+        background-color: cyan
+        /*Cor de fundo*/
+    }
+    
+    p span {
+        background-color: gray
+        /*Cor de fundo*/
+    }
+    /* ==== Exercício 4 ====*/
+    
+    span.x {
+        color: red;
+        /*Cor do texto*/
+    }
+    /* ==== Exercício 4 ====*/
+    
+    blockquote {
+        font-family: Arial, Helvetica, sans-serif;
+        /*Estilo da fonte*/
+        font-size: 12px;
+        /*Tamanho da fonte*/
+        color: #003399;
+        /*Cor do texto*/
+        background-color: #CCCCFF;
+        /*Cor de fundo*/
+        padding: 10px;
+        /*Espaçamento para todos os lados*/
+    }
