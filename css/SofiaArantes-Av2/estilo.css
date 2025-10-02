@@ -1,0 +1,308 @@
+/* 
+    Estiliza o corpo da página, definindo a margem e a distância que os elementos contidos no body ficarão da margem, define a fonte de toda a página, 
+    então se algo for escrito e não obedecer alguma outra regra css que defina outra fonte, a fonte será esta definida no body. Alinha os textos 
+    no centro do elemento e define a cor da fonte e o fundo de tela do corpo da página.
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font: 85% arial, hevetica, sans-serif;
+    text-align: center;
+    color: #333;
+    background: #ddd666;
+}
+
+
+/* Define a cor do link */
+
+a:link {
+    color: #B52C07;
+}
+
+
+/* Define a cor do link quando ele for visitado */
+
+a:visited {
+    color: #B93411;
+}
+
+
+/* Define a cor do link quando ele estiver em foco */
+
+a:focus {
+    color: #000;
+}
+
+
+/* Define a cor do link quando ele for acionado*/
+
+a:hover {
+    color: #7D8206;
+}
+
+
+/* Define a cor do link quando ele estiver ativo */
+
+a:active {
+    color: red;
+}
+
+
+/* Define a margem dos títulos */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5 {
+    margin: 0 0 .5em;
+}
+
+
+/* Define uma cor e uma fonte para o título h2 (então se algo for escrito em h2 terá uma fonte diferente da usada no restante do corpo da página) */
+
+h2 {
+    color: #B52C07;
+    font: 140% georgia, times, "times new roman", serif;
+}
+
+
+/* Define que se um link for usado no título h2, ele não ficará com a linha embaixo(underline) */
+
+h2 a {
+    text-decoration: none;
+}
+
+
+/* Define uma cor e uma fonte para o título h3 (então se algo for escrito em h3 terá uma fonte diferente da usada no restante do corpo da página) */
+
+h3 {
+    color: #7D8206;
+    font: 110% georgia, times, "times new roman", serif;
+}
+
+
+/* 
+    Estiliza o elementos que tiverem o id container, definindo a margem que os elementos contidos nele ficarão da margem, assim como a largura do 
+    container e como o texto ficará alinhado na página(na esquerda). Define a cor de fundo do container e estiliza sua borda.
+*/
+
+#container {
+    margin: 1em auto;
+    width: 650px;
+    text-align: left;
+    background: #fff;
+    border: 1px solid #676767;
+}
+
+
+/* 
+    Estiliza o elementos que tiverem o id cabecalho, definindo a altura do elemento e definindo a largura de 100%, ou seja, se esse elemento estiver 
+    inserido dentro de outro container com 80px de largura, por exemplo, ele terá 80px de largura também. O trecho também define o esquema de posicionamento
+    como relative, fazendo com que o posicionamento seja calculado de acordo com o fluno normal. E, por fim, define a cor de fundo do elemento. 
+*/
+
+#cabecalho {
+    height: 45px;
+    width: 100%;
+    position: relative;
+    background: #CF3;
+}
+
+
+/*
+    Define o esquema de posicionamento como absolute, fazendo com que o posicionamento(e possivelmente o tamnaho) seja especificado com as propriedades 'top', 
+    'right', 'bottom' e 'left', essas prorpiedades são especificadas em relação ao conteúdo do bloco. Depois, ele define a distância do elemento com relação à
+    extremidade de seu elementeo-pai, com left e top. Define também da largura dele e como o texto ficará alinhado na tela(direita)
+*/
+
+#pularmenu {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 645px;
+    text-align: right;
+}
+
+
+/*
+    Define como ficarão os links dentro do bloco pularmenu, estilizando sua cor e retirando o underline do link.
+*/
+
+#pularmenu a {
+    color: #555;
+    text-decoration: none;
+}
+
+
+/*
+    Define a cor de fundo do elemenyo, assim como a cor da sua fonte, a margem superior e inferior com 2px e esquerda e direita com 0, e a margem inferior com 22px.
+*/
+
+#barraNav {
+    background: #9FA41D;
+    color: #272900;
+    padding: 2px 0;
+    margin-bottom: 22px;
+}
+
+
+/*
+    Define as margens da lista não ordenada, padding como 0, assim como define que os elementos da lista não terão estilo visual aplicado aos marcadores, e estiliza a borda esquerda do elemento.
+*/
+
+#barraNav ul {
+    margin: 0 0 0 20px;
+    padding: 0;
+    list-style-type: none;
+    border-left: 1px solid #C4C769;
+}
+
+
+/*
+    Define que os itens da lista seram renderizados em uma ou mais linhas, a margem superior e inferior com 0 e esquerda e direita como 10px, e estiliza a borda direita do item.
+*/
+
+#barraNav li {
+    display: inline;
+    padding: 0 10px;
+    border-right: 1px solid #C4C769;
+}
+
+
+/*
+    Define a cor e retira o underline do link do item da lista.
+*/
+
+#barraNav li a {
+    text-decoration: none;
+    color: #272900;
+}
+
+
+/*
+    Define a cor da fonte, de fundo, e retira o underline do link do item da lista quando este estiver ativo.
+*/
+
+#barraNav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: #272900;
+}
+
+
+/*
+    Define posição adjacente à direita do elemento, assim como sua largura, a cor da sua borda da esquerda e a cor de fundo do elemento.
+*/
+
+#menu {
+    float: right;
+    width: 165px;
+    border-left: 1px solid #C5C877;
+    background: #6F9;
+}
+
+
+/*
+    Define as margens da lista não ordenada, 1em para as margens inferiores e superiores, e 0 para as margens da esquerda e direita, e padding 0.
+*/
+
+#menu ul {
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+/*
+    Define as margens dos itens da lista não ordenada, 0 para a margem superior, da esquerda e da direita, e 1em para a mrgem inferior, e padding 0. 
+    Também define que os elementos da lista não terão estilo visual aplicado aos marcadores.
+*/
+
+#menu ul li {
+    margin: 0 0 1em;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+/*
+    Define posição adjacente à esquerda do elemento, assim como sua largura, cor de fundo e suas margens, como 20px a margem da esquerda e as outras 0.
+*/
+
+#conteudo {
+    float: left;
+    width: 440px;
+    background: #9FC;
+    margin: 0 0 0 20px;
+}
+
+
+/*
+    Define largura da linha das parágrafos do elemento.
+*/
+
+#conteudo p {
+    line-height: 165%;
+}
+
+
+/*
+    Estiliza a barra inferior da classe.
+*/
+
+.blogentrada {
+    border-bottom: 1px solid #C5C877;
+}
+
+
+/*
+    Define como o texto das listas não ordenadas da classe ficará alinhado, assim como suas margens e o tamanho da sua fonte.
+*/
+
+.blogentrada ul {
+    text-align: right;
+    margin: 1em 0;
+    padding: 0;
+    font-size: 95%;
+}
+
+
+/*
+    Define que os elementos da lista não terão estilo visual aplicado aos marcadores, que seráo dispostos em linha, com margin 0 e padding esquerdo de 7px
+*/
+
+.blogentrada li {
+    list-style-type: none;
+    display: inline;
+    margin: 0;
+    padding: 0 0 0 7px;
+}
+
+
+/*
+    Define posição adjacente à direita do elemento, padding de 2px, estiliza sua borda e define sua margem inferior e da esquerda.
+*/
+
+.imagem {
+    float: right;
+    padding: 2px;
+    border: 1px solid #9FA41D;
+    margin: 0 0 10px 10px;
+}
+
+
+/*
+    Define que o elemento será posicionado abaixo da borda inferior de qualquer elemento flutuante, seja à direita ou à esquerda. 
+    Assim como sua cor, como o texto ficará alinhado, o tamanho da fonte, a cor de fundo, e o padding em todas as direções.
+*/
+
+#rodape {
+    clear: both;
+    color: #272900;
+    text-align: right;
+    font-size: 90%;
+    background: #9FA41D;
+    padding: 5px;
+}
