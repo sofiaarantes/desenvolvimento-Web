@@ -1,0 +1,91 @@
+/*CSS questão 2*/
+
+.form {
+    width: 400px;
+    font-family: Arial;
+    background-color: #dcdcdc;
+    margin: 13px 150px 13px 350px;
+    padding: 10px;
+    align-items: center;
+}
+
+.form label {
+    font-weight: bold;
+}
+
+.form textarea {
+    height: 60px;
+}
+
+.radio {
+    display: inline;
+}
+
+.entrada {
+    width: 100%;
+    margin: 8px 0 8px 0;
+}
+
+.submit {
+    background-color: green;
+    color: white;
+    border: 0;
+    padding: 5px 10px 5px 10px;
+}
+
+.reset {
+    background-color: red;
+    color: white;
+    border: 0;
+    padding: 5px 10px 5px 10px;
+}
+
+
+/*CSS questão 1*/
+
+body {
+    font-family: Arial;
+    font-size: 12px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#container {
+    width: 100%;
+    position: absolute;
+}
+
+#cabecalho {
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    background-color: #dcdcdc;
+    padding: 3px 0 3px 0;
+}
+
+.lateral {
+    width: 200px;
+    height: 455px;
+    float: left;
+    font-weight: 10px;
+    background-color: #f7f7f7;
+}
+
+.lateral h1 {
+    padding-left: 10px;
+}
+
+.conteudo {
+    font-style: italic;
+    padding: 13px 5px 13px 5px;
+    align-items: center;
+}
+
+#rodape {
+    text-align: center;
+    background-color: #dcdcdc;
+    padding: 10px 0 10px 0;
+}
