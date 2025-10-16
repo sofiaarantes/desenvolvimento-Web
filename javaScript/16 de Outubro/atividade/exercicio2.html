@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Calcular Salário a Receber</h1>
+        <label for="salarioBase">Digite o salário-base do funcionário:</label>
+        <input type="number" id="salarioBase">
+        <button onclick="calcularSalario()">Calcular Salário</button>
+        <div id="resultado" class="resultado"></div>
+        <div class="explicacao">
+            <p><strong>Descrição do Problema:</strong></p>
+            <p>
+                Calcula o salário a receber com base no salário-base, adicionando uma gratificação de 5% e subtraindo um imposto de 7%, ambos calculados sobre o valor base.
+            </p>
+        </div>
+    </div>
+    <script>
+        function calcularSalario() {
+            // Obtem os elementos recebidos pela view
+            const salarioBaseInput = document.getElementById('salarioBase');
+            const resultadoDiv = document.getElementById('resultado');
+
+            // verifica se nenhum campo veio vazio
+            if (salarioBaseInput.value === '' || parseFloat(salarioBaseInput.value) < 0) {
+                resultadoDiv.innerHTML = "Por favor, digite um salário-base válido!";
+                resultadoDiv.className = 'resultado erro';
+                return;
+            }
+
+            // Converte o dado para número
+            const salBase = parseFloat(salarioBaseInput.value);
+
+            // Calcula gratificação e imposto
+            const gratificacao = salBase * 0.05;
+            const imposto = salBase * 0.07;
+
+            // Calcula o salário a receber
+            const salarioAReceber = salBase + gratificacao - imposto;
+
+            // Exibe o resultado formatado como moeda brasileira
+            resultadoDiv.innerHTML = `O salário a receber é: ${salarioAReceber.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`;
+            resultadoDiv.className = 'resultado';
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script text="text/javascript">
+        document.write(" ============== Exemplo 1 ==============");
+        document.write("<br>");
+        // Exemplos de atribuição simples de valores a variáveis e concatenação
+        s = "Isto vai ser bonito... " // Uma sting, em javascript não precisamos declarar o tipo da variável, ela é do tipo daquilo que está recebendo
+        z = s + "Ah mas vai!"
+        document.write(z);
+        document.write("<br>"); // O sistema interpreta como uma quebra de linha
+        // Incremento e decremento
+        var p, m, n = 1;
+        p = ++n;
+        q = --n;
+        document.write("p = " + p);
+        document.write("<br>");
+        document.write("q = " + q);
+        document.write("<br>");
+        // Valor obtido após a realização de várias operações
+        var r = (2 * p) + 3
+        document.write("r = " + r);
+        document.write("<br>");
+
+        // Operador Booleano
+        var b = (5 > 2)
+        document.write("b = " + b + " (porque 5 > 2 é uma afirmação verdadeira)");
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write(" ============== Exemplo 2 ==============");
+        document.write("<br>");
+
+        var i = 10
+        var s
+        if (i < 10) {
+            s = "Executo somente se a condição for verdadeira"
+        } else {
+            s = " O número i é maior ou igual a 10"
+            i = 0
+        }
+        document.write(s)
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write(" ============== Exemplo 3 ==============");
+        document.write("<br>");
+
+        // Pertence ou não ao conjunto {6, 12, 32, 66}
+        var i = 12
+        var s = " O número " + i
+        switch (i) {
+            case 6:
+                s += " pertence "
+                break;
+            case 12:
+                s += " pertence "
+                break;
+            case 32:
+                s += " pertence "
+                break;
+            case 66:
+                s += " pertence "
+                break;
+            default:
+                s += " não pertence "
+                break;
+        }
+        s += "ao conjunto {6, 12, 32, 66} "
+        document.write(s)
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write(" ============== Exemplo 4 ==============");
+        document.write("<br>");
+
+        // Laço de repetição for
+        for (var i = 0; i <= 3; i++) {
+            alert(i);
+        }
+
+        // Laço de repetição while
+        var j = 0
+        while (j <= 5) {
+            document.write("O número é " + j);
+            document.write("<br>");
+            j++
+        }
+        document.write("O ciclo terminou.<br>");
+    </script>
+</body>
+
+</html>
