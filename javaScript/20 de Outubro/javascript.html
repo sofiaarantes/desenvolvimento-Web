@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script text="text/javascript">
+        document.write("<b>============== Exemplo 1 ==============</b>");
+        document.write("<br>");
+        var fruta = new Array(6)
+        fruta[0] = "Laranja"
+        fruta[1] = "Banana"
+        fruta[2] = "Morango"
+        fruta[3] = "Abacaxi"
+        fruta[4] = "Maça"
+        fruta[5] = "Kiwi"
+
+        document.write("Este Array tem " + fruta.length + " elementos<br><br>")
+
+        for (var i = 0; i < fruta.length; i++) {
+            document.write(fruta[i] + "<br>")
+        }
+
+        document.write("<b>============== Exemplo 2 ==============</b>");
+        document.write("<br>");
+        names = new Array();
+        i = 0;
+        while (i < 3) {
+            next = window.prompt("Entre com um nome: ");
+            names[i] = next;
+            i = i + 1;
+        }
+
+        document.write("<h2>" + names.length + " Nomes informados: </h2>");
+        document.write("<ol>");
+        for (var i = 0; i < names.length; i++)
+            document.write("<li>" + names[i] + "<br>")
+        document.write("</ol>")
+
+        document.write("<b>============== Exemplo 3 ==============</b>");
+        document.write("<br><br>");
+        var frutas = new Array("Laranja", "Banana", "Morango", "Abacaxi", "Maçã", "Kiwi")
+            // Agora ordenamos o Array por ordem alfabética invocando o método sort()
+        frutas.sort()
+    </script>
+    <table border=1>
+        <tr>
+            <td width="140"><b>Ordem Alfabética</b></td>
+            <td><b>Ordem Inversa</b></td>
+        </tr>
+        <td>
+            <script type="text/javascript">
+                for (var i = 0; i < 6; i++)
+                    document.write(frutas[i] + "<br>")
+            </script>
+        </td>
+        <td>
+            <script type="text/javascript">
+                for (var i = 5; i >= 0; i--)
+                    document.write(frutas[i] + "<br>")
+            </script>
+        </td>
+    </table>
+    <script type="text/javascript">
+        document.write("<br><b>============== Exemplo 4 ==============</b>");
+
+        function printPage() {
+            window.print()
+        }
+
+        function novaPagina() {
+            location.href = "https://github.com/sofiaarantes/desenvolvimento-Web"
+        }
+    </script>
+    <p>Clique no botão para imprimir esta belíssima página.</p>
+    <form>
+        <input onclick="javascript:printPage()" type="button" value="Imprimir esta página">
+    </form>
+    <p><b>============== Exemplo 5 ==============</b></p>
+    <p>Clique no botão para trocar esta página por outra.</p>
+    <form>
+        <input onclick="javascript:novaPagina()" type="button" value="Trocar página">
+    </form>
+
+    <script>
+        document.write("<br><b>============== Exemplo 6 ==============</b>");
+        <!-- O objeto navigator guarda informações sobre o browser-->
+        alert(navigator.userAgent)
+    </script>
+</body>
+
+</html>
