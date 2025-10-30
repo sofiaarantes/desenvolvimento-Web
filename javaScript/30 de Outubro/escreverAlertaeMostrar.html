@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p>usando JavaScript getElementById</p>
+    <form name = "teste" method="GET">
+        <input type="text" name="nome" id="idNome"> <br>
+        <input type="text" name="nomeDigitado" id="idNomeDigitado"> 
+        <button type="button" name="botao" id="idBotao" onclick="mensagem();">Clique Aqui</button>
+    </form>
+    <p><span id="mostraValor"></span></p>
+    <script>
+        function mensagem() {
+            var valorNome = document.getElementById("idNome").value;
+            // Exibir mensagem em caixa de alerta 
+            alert("Bem-vindo, " + valorNome);
+            // Copiar valor de uma caixa de texto de outra:
+            document.getElementById("idNomeDigitado").value = document.getElementById("idNome").value;
+            // Escrever na página (usando container span):
+            document.getElementById("mostrarValor").innerHTML = "Muito bem, " + valorNome + " !";
+        }
+    </script>
+</body>
+</html>

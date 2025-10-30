@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Exemplo3 js externo</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <form name="frm" method="get">
+        <script type="text/javascript" src="validacao.js"></script>
+        <p>Validação de formulário</p>
+        <p>Nome: <input type="text" name="nome" id-"nome"></p>
+        <p>Email: <input type="text" name="email" id="email" placeholder="email@dominio.com"></p> <p>Sexo:
+        <label><input type="radio" name="genero" value="M" id="mase"> Masculino</label> <label><input type="radio" name="genero" value="F" id="fem"> Feminino</label>
+        </p>
+        <p>Profissão
+            <select name="cargo" id="cargo">
+            <option value="">Selecione o cargo</option>
+            <option value="programador">Programador</option> <option value="designer">Designer</option> <option value-"tester">Tester</option> <option value="todas" >Todas</option> </select>
+        </p>
+        <label><input type="submit" name="sbt" value="Enviar" onclick="validaForm()"></label></p>
+    </form>
+</body>
+</html>
