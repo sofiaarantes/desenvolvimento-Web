@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando onchange</title>
+    <script>
+        function minhaFuncao() {
+            var elemento = document.getElementById("texto");
+            elemento.value = elemento.value.toUpperCase();
+        }
+    </script>
+</head>
+<body>
+    Escreva um texto: <input type="text" id="texto" onchange="minhaFuncao()">
+    <p>Ao clicarmos fora do input o texto escrito nele ficará todo em caixa alta.</p>
+</body>
+</html>

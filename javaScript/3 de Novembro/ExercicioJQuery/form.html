@@ -1,0 +1,51 @@
+
+<html lang="pt-br"> 
+<head>
+    <title>Exemplo</title> 
+    <style type="text/css">
+    input[type='file'] { 
+        display: none;
+    }
+    img {
+        width: 150px; height: 150px;
+    }
+    label {
+        background-color: #BC8F8F; 
+        border-radius: 20px;
+        color: #fff;
+        cursor: pointer;
+        margin: 100px;
+        padding: 5px 5px;
+    }
+    </style>
+</head>
+<body>
+    <h1>Cadastro</h1>
+    <!--Pre visualiza uma imagem antes de fazer upload-->
+    <form name="form1" method="post" action="" enctype="multipart/form-data">
+        <img src="perfil.gif"></img>
+        <input type="file" name="file" id="imagem" onchange="previsualizar()"><br> 
+        <label for="imagem">+Foto</label><br><br>
+        Nome: <input type="text" name="nome"><br>
+        Idade: <input type="text" name="idade">
+        <input type="submit" name="cadastrar" value="Cadastrar">
+    </form>
+    <!--biblioteca do Jquery disponível pelo google: https://developers.google.com/speed/libraries--> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        function previsualizar() {
+            var imagem = document.form1.querySelector('input [name=file]').files[0];
+            var preview = document.form1.querySelector('img');
+            var reader = new FileReader();
+            reader.onloadend = function () {
+                preview.src = reader.result;
+            }
+            if(imagem) {
+                reader.readAsDataURL(imagem);
+            }else{
+                preview.src = "";
+            }
+        }
+    </script>
+</body>
+</html>
