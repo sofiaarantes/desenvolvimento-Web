@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+</head>
+<body>
+    <h1 id="mensagem"></h1>
+
+    <div class="calcularIMC">
+        <label for="altura">Altura (m):</label>
+        <input type="number" id="altura" step="0.01"> <br><br>
+
+        <label for="peso">Peso (kg): </label>
+        <input type="number" id="peso" step="0.1"> <br><br>
+
+        <!-- Botão que chama a função -->
+        <button type="button" onclick="calcularIMC()">Calcular IMC</button>
+
+        <br><br>
+        
+        <div id="resultado"></div>
+
+    </div>
+
+    <script>
+        // Ao carregar a página, define o título
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('mensagem').textContent = 'Calculadora de IMC';
+        });
+
+        function calcularIMC() {
+            const alt = parseFloat(document.getElementById('altura').value);
+            const peso = parseFloat(document.getElementById('peso').value);
+            const resultado = document.getElementById('resultado');
+
+            // Validação simples
+            if (!isFinite(alt) || !isFinite(peso) || alt <= 0 || peso <= 0) {
+                alert('Informe altura e peso válidos.');
+                return;
+            }
+
+            // Cálculo do IMC
+            const imc = peso / (alt * alt);
+            const imcArredondado = imc.toFixed(2);
+
+            // Classificação
+            let classificacao = '';
+            if (imc < 18.5) {
+                classificacao = 'Abaixo do peso';
+                resultado.style.color = "red";
+            } else if (imc < 25) {
+                classificacao = 'Peso normal';
+                resultado.style.color = "green";
+            } else if (imc < 30) {
+                classificacao = 'Sobrepeso';
+                resultado.style.color = "red";
+            } else {
+                classificacao = 'Obesidade';
+                resultado.style.color = "red";
+            }
+
+            // Exibir resultado
+            resultado.innerHTML  = "<b>IMC: " + imcArredondado + " - " + classificacao + "</b>";
+        }
+    </script>
+
+</body>
+</html>
